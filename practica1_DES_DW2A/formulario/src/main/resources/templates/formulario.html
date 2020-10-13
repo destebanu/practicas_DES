@@ -1,0 +1,110 @@
+<!DOCTYPE  html>
+<html lang="es" xmlns:th="http://www.thymeLeaf.org">
+	<head>
+  		<meta charset="UTF-8">
+  		<title>Alta usuario revista</title>
+  		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  		
+  		
+	</head>
+	<body class="p-3 mb-2 bg-light text-dark">
+
+		<h1 class="text-center">Alta de usuario en revista online</h1>
+		<br/>
+		
+		<form th:action="@{/formulario}" method="post">
+			
+			<div class="border border-primary">
+			<div class="form-group">
+			<p class="text-light bg-dark">Datos personales</p>
+				<label class="text-primary" for="n0">Nombre:</label>
+			  	<input type="text" class="form-control" id="n0" name="nombre" placeholder="Nombre">
+			  	<br/>
+
+			  	<label class="text-primary" for="n1">Primer apellido:</label>
+			  	<input type="text" class="form-control" id="n1" name="apell1" placeholder="Primer apellido">
+			  	<br/>
+
+			  	<label class="text-primary" for="n2">Segundo apellido:</label>
+			  	<input type="text" class="form-control" id="n2" name="apell2" placeholder="Segundo apellido">
+			  	<br/>
+			  	<br/>
+
+			  	<label class="text-primary" for="n3">E-mail:</label>
+			  	<input type="email" class="form-control" id="n3" name="email" placeholder="Correo" required="">
+			  	<br/>
+
+			  	<label class="text-primary" for="n4">Fecha nacimiento:</label>
+			  	<input type="date" class="form-control" id="n4" name="fenac">
+			  	<br/>
+
+			  	<label class="text-primary" for="n5">Contraseña:</label>
+			  	<input type=password class="form-control" id="n5" name="contrasena" placeholder="Introduce tu contraseña" required="">
+			  	<br/>
+
+			  	<p class="text-primary" >Sexo:</p>
+			  	<label for="varon">Varón</label>
+			  	<input type="radio" id="varon" name="gender" value="Varón">
+			  	<br/>
+				<label for="mujer">Mujer</label>
+				<input type="radio" id="mujer" name="gender" value="Mujer">
+				<br/>
+				<label for="otro">Otro</label>
+				<input type="radio" id="otro" name="gender" value="Otro">
+				<br/>
+				<br/>
+
+
+			  	<label class="text-primary" for="n7">Dirección:</label>
+			  	<input type="text" class="form-control" id="n7" name="direcc" placeholder="calle, plaza, nº, piso">			 
+			</div>
+
+			<div class="form-group">
+				<p class="text-light bg-dark">Nivel de estudios e intereses</p>
+				<p class="text-primary" >Nivel de estudios:</p>
+			  	<label class="text-secondary" for="e1">Certificado escolar</label>
+			  	<input type="radio" id="e1" name="nivest" value="Varón">
+			  	<br/>
+				<label class="text-secondary" for="e2">Graduado en E.S.O.</label>
+				<input type="radio" id="e2" name="nivest" value="Graduado en E.S.O.">
+				<br/>
+				<label class="text-secondary" for="e3">Bachiller - Formación profesional</label>
+				<input type="radio" id="e3" name="nivest" value="Bachiller - Formación profesional">
+				<br/>
+				<label class="text-secondary" for="e4">Diplomado</label>
+				<input type="radio" id="e4" name="nivest" value="Diplomado">
+				<br/>
+				<label class="text-secondary" for="e5">Licenciado o Doctorado</label>
+				<input type="radio" id="e5" name="nivest" value="Licenciado o Doctorado">
+				<br/>
+				<br/>
+
+
+			  	<p class="text-primary" >Recibir artículos sobre los siguientes temas:</p>
+			  	<label class="text-secondary" for="f1">Música</label>
+			  	<input type="checkbox" id="f1" name="art1" value="Música">
+			  	<br/>
+			  	<label class="text-secondary" for="f2">Deportes</label>
+			  	<input type="checkbox" id="f2" name="art2" value="Deportes">
+			  	<br/>
+			  	<label class="text-secondary" for="f3">Cine</label>
+			  	<input type="checkbox" id="f3" name="art3" value="Cine">
+			  	<br/>
+			  	<label class="text-secondary" for="f4">Libros</label>
+			  	<input type="checkbox" id="f4" name="art4" value="Libros">
+			  	<br/>
+			  	<label class="text-secondary" for="f5">Ciencia</label>
+			  	<input type="checkbox" id="f5" name="art5" value="Ciencia">
+			  	<br/>
+			</div>
+			
+			<p class="text-light bg-dark">Enviar formulario</p>
+			<div class="form-group">
+				<p class="text-warning">¿Estás seguro de que los datos son correctos?</p>
+				<button type="submit" class="btn btn-primary">Enviar</button>
+				<button type="reset" class="btn btn-dark">Reset</button>
+			</div>
+			</div>
+		</form>
+	</body>
+</html>

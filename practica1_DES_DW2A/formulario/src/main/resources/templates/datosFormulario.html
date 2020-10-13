@@ -1,0 +1,71 @@
+<html lang="es" xmlns:th="http://www.thymeLeaf.org">
+<head>
+  		<meta charset="UTF-8">
+  		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  		<title>Data</title>
+</head>
+<body class="p-3 mb-2 bg-light text-dark">
+		<h1 class="text-center">Información de la solicitud:</h1>
+
+		<table class="table table-bordered">
+		  <tr class="table-dark">
+		    <th>Nombre:</th>
+		    <td th:text=${nombre_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>Primer apellido</th>
+		    <td th:text=${apell1_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>Segundo apellido</th>
+		    <td th:text=${apell2_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>Sexo</th>
+		    <td th:text=${sexo_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>Fecha de nacimiento</th>
+		    <td th:text=${fenac_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>Email</th>
+		    <td th:text=${email_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>Contraseña</th>
+		    <td th:text=${contrasena_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>Dirección</th>
+		    <td th:text=${direccion_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>Nivel de estudios</th>
+		    <td th:text=${nivest_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>Artículos</th>
+		    <td th:text=${musica_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>-</th>
+		    <td th:text=${deportes_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>-</th>
+		    <td th:text=${cine_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>-</th>
+		    <td th:text=${libros_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>-</th>
+		    <td th:text=${ciencia_form}></td>
+		  </tr>
+		</table>
+		
+			
+	</body>
+</html>

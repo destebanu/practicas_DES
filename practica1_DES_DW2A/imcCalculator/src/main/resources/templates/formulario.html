@@ -1,0 +1,48 @@
+<!DOCTYPE  html>
+<html lang="es" xmlns:th="http://www.thymeLeaf.org">
+	<head>
+  		<meta charset="UTF-8">
+  		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  		<title>IMC Calculator</title>
+	</head>
+	<body class="p-3 mb-2 bg-light text-dark">
+
+		<h1 class="text-center">Calculadora IMC</h1>
+		<br/>
+		
+		<form th:action="@{/formulario}" method="post">
+			<p class="text-light bg-dark"><ins>Datos personales</ins></p>
+			<div class="border border-success">
+			<div class="form-group" >
+				<label for="n0" class="text-secondary">Peso:</label>
+			  	<input type="number" class="form-control" id="n0" name="peso" placeholder="Peso en Kg (Ej.:68)">
+			  	<br/>
+
+			  	<label for="n1" class="text-secondary">Estatura:</label>
+			  	<input type="number" class="form-control" step="0.01" id="n1" name="estatura" placeholder="Estatura en metros (Ej.:1'70)">
+			  	<br/>
+
+			  	<label for="n2" class="text-secondary">Edad:</label>
+			  	<input type="number" class="form-control" id="n2" name="edad" placeholder="Tu edad">
+			  	<br/>
+			  	<br/>
+
+			  	<p class="text-secondary">Sexo:</p>
+			  	<label for="varon">Varón</label>
+			  	<input type="radio" id="varon" name="sexo" value="Varón">
+			  	<br/>
+				<label for="mujer">Mujer</label>
+				<input type="radio" id="mujer" name="sexo" value="Mujer">
+				<br/>
+			</div>
+
+			<p class="text-primary"><ins>Enviar formulario</ins></p>
+			<div class="form-group">
+				<p class="text-warning">¿Estás seguro de que los datos son correctos?</p>
+				<button type="submit" class="btn btn-primary">Enviar</button>
+				<button type="reset" class="btn btn-dark">Reset</button>
+			</div>
+			</div>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<html lang="es" xmlns:th="http://www.thymeLeaf.org">
+<head>
+  		<meta charset="UTF-8">
+  		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  		<title>IMC Results</title>
+</head>
+<body class="p-3 mb-2 bg-light text-dark">
+	<div class="border border-info">
+		<h2 class="text-light bg-dark">Datos introducidos:</h2>
+		<table class="table table-bordered">
+		  <tr class="table-dark">
+		    <th>Peso:</th>
+		    <td th:text=${peso_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>Estatura</th>
+		    <td th:text=${estatura_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>Edad</th>
+		    <td th:text=${edad_form}></td>
+		  </tr>
+		  <tr class="table-dark">
+		    <th>Sexo</th>
+		    <td th:text=${sexo_form}></td>
+		  </tr>
+		</table>
+		<br/>
+		
+		<h2 class="text-light bg-dark">IMC y %GC:</h2>
+		<p class="text-info"><ins>Índice de masa corporal:</ins></p>
+		<p class="text-success" th:text="${#numbers.formatDecimal(imc_form, 2, 'COMMA', 2, 'POINT')}"></p>
+		<br/>
+		
+		<p class="text-info"><ins>Porcentaje de grasa corporal:</ins></p>
+		<p class="text-success" th:text="${#numbers.formatDecimal(pgc_form, 2, 'COMMA', 2, 'POINT') + '%'}"></p>
+		<br/>
+		
+		<p class="text-info"><ins>Clasificación general en función del porcentaje de grasa corporal:</ins></p>
+		<p class="text-success" th:text=${resultado_form}></p>
+	</div>
+		
+				
+	</body>
+</html>
